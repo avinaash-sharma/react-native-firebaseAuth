@@ -7,10 +7,10 @@ export default class Loading extends Component {
   UNSAFE_componentWillMount(){
     firebase.auth().onAuthStateChanged((authenticate) =>{
       if(authenticate){
-        this.props.navigation.replace("Home");
+        this.props.navigation.navigate("Home");
       }
       else{
-        this.props.navigation.replace("SignUp");
+        this.props.navigation.navigate("Login");
       }
     })
   }

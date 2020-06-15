@@ -30,6 +30,9 @@ export default class App extends Component {
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Loading"
+          screenOptions={{
+            headerShown: false
+          }}
         >
         
           <Stack.Screen name="Home" component={Home} />
